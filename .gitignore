@@ -1,0 +1,10 @@
+# OS files
+.DS_Store
+Thumbs.db
+.directory
+
+# Local IDE configuration
+.vscode/
+.idea/
+*.suo
+*.user
