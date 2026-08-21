@@ -115,7 +115,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
           </svg>
-          <span>Local Club BBQ Arena, Australia</span>
+          <a href="https://www.google.com/maps/search/?api=1&query=Upper+Horton+Sports+Club" target="_blank" class="hover:text-bbq-orange transition-colors">Upper Horton Sports Club, NSW</a>
         </div>
       </div>
 
@@ -162,7 +162,7 @@
           </div>
           <h3 class="font-oswald text-xl font-semibold text-white uppercase">Friday Night Camping</h3>
           <p class="mt-3 text-sm text-stone-400 leading-relaxed">
-            Camping is available on-site on Friday night (25th September). Roll up, pitch your tent, set up your rigs, and get ready for the 6:00 AM pit lighting on Saturday.
+            Camping is available on-site on Friday night (25th September). Rates are $10/night for unpowered and $20/night for powered sites, payable on arrival. Set up your rigs and prep for a 6:00 AM start!
           </p>
         </div>
 
@@ -451,11 +451,11 @@
 
           <!-- Camping Dropdown -->
           <div>
-            <label for="camping" class="block text-sm font-semibold text-stone-300">Camping Required on Friday Night (25th)? *</label>
+            <label for="camping" class="block text-sm font-semibold text-stone-300">Camping Required on Friday Night (25th)? (Payable on arrival) *</label>
             <select id="camping" required class="mt-2 block w-full rounded-lg bg-stone-900 border border-stone-750 text-white px-4 py-3 focus:outline-none focus:border-bbq-orange focus:ring-1 focus:ring-bbq-orange text-sm">
               <option value="no">No, we will arrive Saturday morning.</option>
-              <option value="tent">Yes, we are camping in tents.</option>
-              <option value="rv">Yes, we are bringing an RV / Caravan.</option>
+              <option value="unpowered">Yes, Unpowered Site ($10 / night)</option>
+              <option value="powered">Yes, Powered Site ($20 / night)</option>
             </select>
           </div>
 
