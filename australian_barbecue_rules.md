@@ -52,6 +52,9 @@ In the event of a tie in any protein category, the winner is determined by count
 2. Highest **Texture / Tenderness** score.
 3. Highest **Appearance / Presentation** score.
 
+### Finality of Decisions
+* **All judges' decisions are final.** Scoring is conducted blindly and independently by the designated judging panel. No appeals, disputes, or score reviews will be entered into once the results are certified.
+
 ---
 
 ## 5. Typical Schedule Template
