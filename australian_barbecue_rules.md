@@ -10,9 +10,14 @@ These rules have been localized for Australian competition standards, drawing pr
   * Cooking units must be fueled exclusively by wood, lump charcoal, or wood pellets.
   * Pellet smokers (which plug in to power the feed auger/fan) are permitted in the main competition.
   * Gas or electric assist is permitted **for ignition only** (e.g., using a gas torch or electric starter to light charcoal). Gas-only or electric-only cooking is strictly prohibited.
+* **BYO Smoker**: 
+  * Teams must bring their own cooking units (smokers, grills, or pits). No cooking equipment will be provided on-site by the club or organizers.
 * **Pre-Cooking Rule**: 
   * All competition meat must start raw, unseasoned, and unmarinated.
   * Trimming, injecting, and seasoning must be done on-site *after* passing the official meat inspection. No pre-prep is allowed at home.
+* **BYO Meat**: 
+  * Teams must supply their own competition meat (Pork and Beef Brisket).
+  * All meat must be brought to the venue raw and unseasoned, and must pass the official meat inspection before any preparation begins.
 * **Fuel & Safety**: 
   * Each team station must be equipped with a working fire extinguisher, food-grade prep surfaces, clean handwashing/sanitising stations, and accurate meat thermometers.
 
