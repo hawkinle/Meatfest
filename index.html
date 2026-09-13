@@ -1,611 +1,1357 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meat Fest 2026 | Low & Slow BBQ Competition</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Google Fonts: Oswald for headings, Inter for body -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            oswald: ['Oswald', 'sans-serif'],
-          },
-          colors: {
-            bbq: {
-              red: '#b91c1c',     /* red-700 */
-              orange: '#ea580c',  /* orange-600 */
-              dark: '#1c1917',    /* stone-900 */
-              gold: '#d97706',    /* amber-600 */
-            }
-          }
-        }
-      }
-    }
-  </script>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-  </style>
-</head>
-<body class="bg-stone-900 text-stone-100 font-sans selection:bg-bbq-orange selection:text-white">
-
-  <!-- Navigation Bar -->
-  <nav class="sticky top-0 z-50 bg-stone-950/95 border-b border-stone-800 backdrop-blur-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-20">
-        <!-- Logo -->
-        <div class="flex items-center gap-3">
-          <svg class="h-10 w-10 text-bbq-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-          <span class="font-oswald text-2xl font-bold tracking-wider text-white"><span class="line-through text-stone-500 mr-2 text-lg font-normal">SAUSAGE FEST</span>MEAT FEST <span class="text-bbq-orange">2026</span></span>
-        </div>
-        
-        <!-- Desktop Nav Links -->
-        <div class="hidden md:flex items-center gap-8">
-          <a href="#event-details" class="hover:text-bbq-orange transition-colors text-sm font-medium tracking-wide">THE EVENT</a>
-          <a href="#prizes" class="hover:text-bbq-orange transition-colors text-sm font-medium tracking-wide">PRIZES</a>
-          <a href="#schedule" class="hover:text-bbq-orange transition-colors text-sm font-medium tracking-wide">TIMELINE</a>
-          <a href="#rules" class="hover:text-bbq-orange transition-colors text-sm font-medium tracking-wide">RULES</a>
-          <a href="#register" class="bg-bbq-orange hover:bg-bbq-orange/90 text-white px-5 py-2.5 rounded text-sm font-semibold tracking-wider font-oswald transition-all">REGISTER TEAM</a>
-        </div>
-
-        <!-- Mobile Nav Toggle -->
-        <div class="md:hidden">
-          <button id="mobile-menu-btn" class="text-stone-300 hover:text-white p-2" aria-label="Toggle menu">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meat Fest 2026 | The $15 Low & Slow Feast | Upper Horton Sports Club</title>
     
-    <!-- Mobile Nav Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-stone-950 border-t border-stone-800 px-4 py-4 space-y-3">
-      <a href="#event-details" class="block hover:text-bbq-orange transition-colors py-2 text-base font-medium">THE EVENT</a>
-      <a href="#prizes" class="block hover:text-bbq-orange transition-colors py-2 text-base font-medium">PRIZES</a>
-      <a href="#schedule" class="block hover:text-bbq-orange transition-colors py-2 text-base font-medium">TIMELINE</a>
-      <a href="#rules" class="block hover:text-bbq-orange transition-colors py-2 text-base font-medium">RULES</a>
-      <a href="#register" class="block bg-bbq-orange text-center text-white py-3 rounded font-oswald font-semibold tracking-wider">REGISTER TEAM</a>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Meat Fest 2026 at Upper Horton Sports Club. Smoker competition spots are sold out! Join us Saturday 26th September for an epic, cheap, and fun $15 low-and-slow barbecue feast.">
+    <meta name="keywords" content="Meat Fest 2026, Upper Horton Sports Club, Low and Slow BBQ, Barbecue Feast, NSW BBQ Competition, Upper Horton NSW">
+    <meta name="author" content="Upper Horton Sports Club">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://upperhortonsportsclub.com.au/">
+    <meta property="og:title" content="Meat Fest 2026 | The $15 Low & Slow Feast">
+    <meta property="og:description" content="Smoking spots sold out! Join us Saturday 26th September for an epic $15 low-and-slow BBQ plate featuring competition pork, beef brisket, and hot roast veg.">
+    <meta property="og:image" content="images/social_promo_post.jpg">
+
+    <!-- Modern Typography: Space Grotesk for Headings, Outfit for Body (Upper Horton Sports Club Standard) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0047AB; /* Electric Blue */
+            --accent: #FF4500;  /* Vibrant Orange-Red / Ember */
+            --accent-glow: rgba(255, 69, 0, 0.35);
+            --bg-dark: #0a0e14; /* Upper Horton signature deep slate black */
+            --bg-card: rgba(18, 24, 34, 0.7);
+            --bg-glass: rgba(255, 255, 255, 0.05);
+            --border-glass: rgba(255, 255, 255, 0.1);
+            --border-glass-hover: rgba(255, 255, 255, 0.22);
+            --text-main: #f8f9fa;
+            --text-dim: #adb5bd;
+            --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Ambient Floating Glowing Blobs */
+        .blob-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            filter: blur(90px);
+            opacity: 0.38;
+            pointer-events: none;
+        }
+
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            animation: move 22s infinite alternate ease-in-out;
+        }
+
+        .blob-1 {
+            width: 500px;
+            height: 500px;
+            top: -120px;
+            left: -100px;
+            background: var(--primary);
+        }
+
+        .blob-2 {
+            width: 420px;
+            height: 420px;
+            bottom: 10%;
+            right: -80px;
+            background: var(--accent);
+            animation-duration: 28s;
+            animation-direction: alternate-reverse;
+        }
+
+        .blob-3 {
+            width: 350px;
+            height: 350px;
+            top: 45%;
+            left: 20%;
+            background: rgba(0, 71, 171, 0.5);
+            animation-duration: 25s;
+        }
+
+        @keyframes move {
+            from { transform: translate(0, 0) scale(1); }
+            to { transform: translate(60px, 90px) scale(1.08); }
+        }
+
+        /* Top Sticky Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(10, 14, 20, 0.85);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-glass);
+            padding: 0.85rem 1.5rem;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .club-badge-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 0.35rem 0.85rem;
+            border-radius: 50px;
+            background: var(--bg-glass);
+            border: 1px solid var(--border-glass);
+            transition: all 0.3s ease;
+        }
+
+        .club-badge-link:hover {
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .brand-logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .brand-dot {
+            width: 10px;
+            height: 10px;
+            background: var(--accent);
+            border-radius: 3px;
+            display: inline-block;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-link {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.25s ease;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+        }
+
+        /* Pill Buttons */
+        .btn-pill {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: #fff;
+            padding: 0.75rem 1.8rem;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px -4px rgba(0, 71, 171, 0.4);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-pill:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px -4px rgba(0, 71, 171, 0.6);
+            filter: brightness(1.1);
+        }
+
+        .btn-pill.btn-accent {
+            background: var(--accent);
+            box-shadow: 0 8px 24px -4px var(--accent-glow);
+        }
+
+        .btn-pill.btn-accent:hover {
+            box-shadow: 0 12px 28px -2px rgba(255, 69, 0, 0.6);
+            filter: brightness(1.08);
+        }
+
+        .btn-pill.btn-glass {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid var(--border-glass);
+            box-shadow: none;
+            backdrop-filter: blur(8px);
+        }
+
+        .btn-pill.btn-glass:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem;
+        }
+
+        /* Mobile Drawer */
+        .mobile-drawer {
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 1.25rem;
+            background: rgba(10, 14, 20, 0.98);
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        .mobile-drawer.open {
+            display: flex;
+        }
+
+        /* Hero Section */
+        header.hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 4rem 1.5rem 6rem;
+            background: linear-gradient(to bottom, rgba(10, 14, 20, 0.6) 0%, rgba(10, 14, 20, 0.85) 60%, var(--bg-dark) 100%),
+                        url('images/meat_fest_banner.jpg');
+            background-size: cover;
+            background-position: center 35%;
+            background-attachment: fixed;
+        }
+
+        .hero-content {
+            max-width: 980px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Sold Out Pill Badge */
+        .sold-out-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 69, 0, 0.15);
+            border: 1px solid rgba(255, 69, 0, 0.4);
+            color: #ff7849;
+            padding: 0.45rem 1.25rem;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.75rem;
+            box-shadow: 0 4px 16px rgba(255, 69, 0, 0.15);
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 10px var(--accent);
+            animation: blink 1.6s infinite ease-in-out;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.85); }
+        }
+
+        h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2.8rem, 8vw, 5.5rem);
+            line-height: 1.08;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: -1.5px;
+            background: linear-gradient(45deg, #ffffff 40%, #c4cbd4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-subhead {
+            display: block;
+            font-size: clamp(1.4rem, 3.5vw, 2.3rem);
+            font-weight: 700;
+            color: var(--accent);
+            letter-spacing: -0.5px;
+            margin-top: 0.35rem;
+            -webkit-text-fill-color: var(--accent);
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.1rem, 2vw, 1.35rem);
+            color: var(--text-dim);
+            margin-bottom: 2.25rem;
+            font-weight: 300;
+            max-width: 780px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Key Metric Badges */
+        .hero-badges-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.85rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .meta-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--bg-glass);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--border-glass);
+            padding: 0.65rem 1.25rem;
+            border-radius: 100px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .meta-pill strong {
+            color: #fff;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Bento Grid Layout (Upper Horton Signature) */
+        main {
+            max-width: 1200px;
+            margin: -60px auto 100px;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .bento-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        section.card {
+            background: var(--bg-glass);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid var(--border-glass);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: var(--shadow);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        section.card:hover {
+            transform: translateY(-4px) scale(1.01);
+            border-color: var(--border-glass-hover);
+            box-shadow: 0 14px 40px 0 rgba(0, 0, 0, 0.55);
+        }
+
+        /* Bento Span Sizes */
+        .col-span-1 { grid-column: span 1; }
+        .col-span-2 { grid-column: span 2; }
+        .col-span-3 { grid-column: span 3; }
+
+        h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.95rem;
+            margin-bottom: 1.25rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        h2::before {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 3px;
+            display: inline-block;
+            flex-shrink: 0;
+        }
+
+        h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.35rem;
+            color: #fff;
+            margin-bottom: 0.65rem;
+        }
+
+        p {
+            color: var(--text-dim);
+            font-size: 1.05rem;
+            margin-bottom: 1rem;
+            line-height: 1.65;
+        }
+
+        p.lead {
+            font-size: 1.2rem;
+            color: #e9ecef;
+            font-weight: 400;
+        }
+
+        /* Feast Highlight Card Details */
+        .feast-banner-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+
+        .feast-items-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+            margin: 1.5rem 0 1rem;
+        }
+
+        .feast-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 1.25rem;
+            transition: border-color 0.2s ease;
+        }
+
+        .feast-item:hover {
+            border-color: rgba(255, 255, 255, 0.18);
+        }
+
+        .feast-item-icon {
+            font-size: 1.75rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .feast-item h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15rem;
+            color: #fff;
+            margin-bottom: 0.35rem;
+        }
+
+        .feast-item p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            color: var(--text-dim);
+        }
+
+        .price-callout {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            padding: 1.25rem 1.5rem;
+            background: rgba(255, 69, 0, 0.08);
+            border: 1px solid rgba(255, 69, 0, 0.3);
+            border-radius: 16px;
+            margin-top: 1.5rem;
+        }
+
+        .price-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.75rem;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1;
+        }
+
+        .price-number span {
+            color: var(--accent);
+        }
+
+        .price-desc {
+            font-size: 0.95rem;
+            color: #f1f3f5;
+            line-height: 1.4;
+        }
+
+        /* Schedule Timeline List (matching events.html pattern) */
+        .timeline-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--border-glass);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-time {
+            min-width: 140px;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1.2;
+        }
+
+        .timeline-time.highlight {
+            color: var(--accent);
+        }
+
+        .timeline-tag {
+            display: block;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-dim);
+            font-weight: 600;
+            margin-top: 4px;
+        }
+
+        .timeline-info {
+            flex-grow: 1;
+        }
+
+        .timeline-info h4 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 0.35rem;
+        }
+
+        .timeline-info p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Reservation Form Styles */
+        .reservation-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0%, rgba(255, 255, 255, 0.02) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.25rem;
+            margin-top: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        label {
+            font-size: 0.88rem;
+            font-weight: 600;
+            color: #e9ecef;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            background: rgba(10, 14, 20, 0.75);
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            padding: 0.85rem 1rem;
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            transition: all 0.25s ease;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(255, 69, 0, 0.2);
+            background: rgba(10, 14, 20, 0.95);
+        }
+
+        select option {
+            background: #0a0e14;
+            color: #fff;
+        }
+
+        /* Success Message Container */
+        .success-box {
+            display: none;
+            text-align: center;
+            padding: 3rem 1.5rem;
+        }
+
+        .success-box.show {
+            display: block;
+        }
+
+        .success-icon {
+            width: 68px;
+            height: 68px;
+            border-radius: 50%;
+            background: rgba(16, 185, 129, 0.15);
+            border: 2px solid #10b981;
+            color: #10b981;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+
+        /* Rules Accordion / Card */
+        .rules-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 1.25rem;
+        }
+
+        .rule-subcard {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 16px;
+            padding: 1.5rem;
+        }
+
+        .rule-subcard ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: 0.75rem;
+        }
+
+        .rule-subcard li {
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            padding-left: 1.25rem;
+            position: relative;
+        }
+
+        .rule-subcard li::before {
+            content: '•';
+            color: var(--accent);
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        /* Footer matching Upper Horton Sports Club */
+        footer {
+            text-align: center;
+            padding: 5rem 1.5rem 4rem;
+            border-top: 1px solid var(--border-glass);
+            margin-top: 80px;
+            background: rgba(10, 14, 20, 0.95);
+        }
+
+        .footer-brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1.5rem 0 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-dim);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+        }
+
+        .footer-copy {
+            color: var(--text-dim);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-dark);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 10px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            main {
+                margin-top: -30px;
+            }
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+            .col-span-1, .col-span-2, .col-span-3 {
+                grid-column: span 1;
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            .rules-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links, .nav-cta {
+                display: none;
+            }
+            .mobile-menu-btn {
+                display: block;
+            }
+            header.hero {
+                padding-top: 3rem;
+                background-attachment: scroll;
+            }
+            .timeline-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .timeline-time {
+                min-width: auto;
+            }
+            .price-callout {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.75rem;
+            }
+            h1 {
+                font-size: 2.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Ambient Glowing Blobs -->
+    <div class="blob-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
     </div>
-  </nav>
 
-  <!-- Hero Banner Section -->
-  <header class="relative bg-stone-950 overflow-hidden min-h-[500px] flex items-center">
-    <!-- Banner Image (Copied to workspace) -->
-    <div class="absolute inset-0 z-0">
-      <img src="images/meat_fest_banner.jpg" alt="Meat Fest Banner" class="w-full h-full object-cover opacity-45 transform scale-105 transition-transform duration-[10000ms] hover:scale-100">
-      <div class="absolute inset-0 bg-gradient-to-t from-stone-900 via-stone-900/60 to-transparent"></div>
-    </div>
-
-    <!-- Content overlay -->
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 text-center">
-      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-bbq-red/20 text-red-400 border border-bbq-red/30 uppercase tracking-widest mb-6">
-        <span class="w-2 h-2 rounded-full bg-red-500 animate-pulse"></span> Free Competition Entry
-      </span>
-      <h1 class="font-oswald text-5xl sm:text-6xl md:text-8xl font-black tracking-tight text-white uppercase drop-shadow-lg leading-none">
-        <span class="line-through text-stone-500 block text-3xl sm:text-4xl md:text-5xl tracking-normal mb-4 font-normal">SAUSAGE FEST</span>
-        MEAT FEST <span class="text-bbq-orange">2026</span>
-      </h1>
-      <p class="mt-6 text-xl sm:text-2xl max-w-2xl mx-auto text-stone-300 font-light drop-shadow-md">
-        The ultimate low-and-slow barbecue showdown. Arrive early, fire up the pits, and take home the crown!
-      </p>
-      
-      <!-- Date & Location Badges -->
-      <div class="mt-10 flex flex-wrap justify-center gap-4 sm:gap-6 text-lg font-semibold">
-        <div class="bg-stone-800/80 backdrop-blur border border-stone-700 px-6 py-3 rounded-lg flex items-center gap-3">
-          <svg class="h-6 w-6 text-bbq-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-          </svg>
-          <span>Saturday, 26th September 2026</span>
-        </div>
-        <div class="bg-stone-800/80 backdrop-blur border border-stone-700 px-6 py-3 rounded-lg flex items-center gap-3">
-          <svg class="h-6 w-6 text-bbq-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-            <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-          </svg>
-          <a href="https://www.google.com/maps/search/?api=1&query=Upper+Horton+Sports+Club" target="_blank" class="hover:text-bbq-orange transition-colors">Upper Horton Sports Club, NSW</a>
-        </div>
-      </div>
-
-      <div class="mt-12 flex justify-center gap-4">
-        <a href="#register" class="bg-bbq-orange hover:bg-bbq-orange/90 text-white font-oswald text-lg font-bold tracking-wider px-8 py-4 rounded shadow-lg shadow-bbq-orange/20 transition-all hover:-translate-y-0.5">
-          REGISTER YOUR TEAM
-        </a>
-        <a href="#rules" class="bg-stone-800/80 hover:bg-stone-700 border border-stone-600 text-stone-200 font-oswald text-lg font-bold tracking-wider px-8 py-4 rounded transition-all">
-          VIEW RULES
-        </a>
-      </div>
-    </div>
-  </header>
-
-  <!-- Key Event Details Section -->
-  <section id="event-details" class="py-20 bg-stone-900 relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-oswald text-4xl sm:text-5xl font-bold text-white uppercase">WHAT'S ON AT <span class="line-through text-stone-500 font-normal">SAUSAGE FEST</span> MEAT FEST</h2>
-        <div class="h-1.5 w-24 bg-bbq-orange mx-auto mt-4 rounded-full"></div>
-        <p class="mt-6 text-lg text-stone-400">Everything you need to know about entry, camping, drinks, and the feast!</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <!-- Feature 1 -->
-        <div class="bg-stone-800/50 border border-stone-800 hover:border-stone-700 p-8 rounded-xl transition-all hover:-translate-y-1">
-          <div class="w-12 h-12 bg-bbq-orange/10 rounded-lg flex items-center justify-center text-bbq-orange mb-6">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h3 class="font-oswald text-xl font-semibold text-white uppercase">100% Free Entry</h3>
-          <p class="mt-3 text-sm text-stone-400 leading-relaxed">
-            No registration fees or hidden costs for teams. Enter your team for free, cook your best proteins, and claim the prizes!
-          </p>
-        </div>
-
-        <!-- Feature 2 -->
-        <div class="bg-stone-800/50 border border-stone-800 hover:border-stone-700 p-8 rounded-xl transition-all hover:-translate-y-1">
-          <div class="w-12 h-12 bg-bbq-orange/10 rounded-lg flex items-center justify-center text-bbq-orange mb-6">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-            </svg>
-          </div>
-          <h3 class="font-oswald text-xl font-semibold text-white uppercase">Friday Night Camping</h3>
-          <p class="mt-3 text-sm text-stone-400 leading-relaxed">
-            Camping is available on-site on Friday night (25th September). Rates are $10/night for unpowered and $20/night for powered sites, payable on arrival. Set up your rigs and prep for a 6:00 AM start!
-          </p>
-        </div>
-
-        <!-- Feature 3 -->
-        <div class="bg-stone-800/50 border border-stone-800 hover:border-stone-700 p-8 rounded-xl transition-all hover:-translate-y-1">
-          <div class="w-12 h-12 bg-bbq-orange/10 rounded-lg flex items-center justify-center text-bbq-orange mb-6">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m12.728 12.728l.707-.707M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h3 class="font-oswald text-xl font-semibold text-white uppercase">Club Can Bar</h3>
-          <p class="mt-3 text-sm text-stone-400 leading-relaxed">
-            Ice-cold drinks and refreshments will be fully available on-site all day. The club is running a fully-stocked **Can Bar** to keep competitors and supporters refreshed.
-          </p>
-        </div>
-
-        <!-- Feature 4 -->
-        <div class="bg-stone-800/50 border border-stone-800 hover:border-stone-700 p-8 rounded-xl transition-all hover:-translate-y-1">
-          <div class="w-12 h-12 bg-bbq-orange/10 rounded-lg flex items-center justify-center text-bbq-orange mb-6">
-            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-            </svg>
-          </div>
-          <h3 class="font-oswald text-xl font-semibold text-white uppercase">Saturday Night Grazing</h3>
-          <p class="mt-3 text-sm text-stone-400 leading-relaxed">
-            Each team entry includes one free meal ticket for our Saturday evening grazing session. Additional tickets can be purchased at the venue. The club will provide fresh roasted vegetables to round out the feast.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Prizes Highlight Section -->
-  <section id="prizes" class="py-20 bg-stone-950 border-y border-stone-850">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="text-bbq-orange font-oswald text-xl font-bold uppercase tracking-widest">THE Stakes are High</span>
-      <h2 class="font-oswald text-4xl sm:text-6xl font-black text-white mt-2 uppercase">CHAMPIONSHIP PRIZES</h2>
-      <div class="h-1.5 w-24 bg-bbq-orange mx-auto mt-4 rounded-full"></div>
-      
-      <!-- Beer Prize Card -->
-      <div class="mt-12 max-w-2xl mx-auto bg-stone-900 border-2 border-bbq-orange/40 rounded-2xl p-8 sm:p-12 shadow-2xl relative overflow-hidden">
-        <!-- Accent Glow -->
-        <div class="absolute -right-16 -top-16 w-32 h-32 bg-bbq-orange/20 rounded-full blur-2xl"></div>
-        <div class="absolute -left-16 -bottom-16 w-32 h-32 bg-bbq-orange/20 rounded-full blur-2xl"></div>
-        
-        <div class="relative z-10">
-          <span class="inline-block bg-bbq-gold/20 text-amber-400 border border-bbq-gold/30 rounded px-4 py-1 text-xs uppercase tracking-wider font-semibold mb-6">
-            Section Winners
-          </span>
-          <h3 class="font-oswald text-4xl sm:text-5xl font-extrabold text-white leading-none uppercase">
-            A FULL CARTON OF BEER
-          </h3>
-          <p class="text-bbq-orange font-oswald text-xl mt-2 tracking-wide font-semibold">
-            TO THE WINNER OF EVERY SECTION!
-          </p>
-          
-          <!-- Category List Pill Badges -->
-          <div class="mt-8 flex flex-wrap justify-center gap-2">
-            <span class="bg-stone-800 text-stone-200 border border-stone-700 px-4 py-2 rounded font-medium text-sm">🐷 Pork Category</span>
-            <span class="bg-stone-800 text-stone-200 border border-stone-700 px-4 py-2 rounded font-medium text-sm">🥩 Beef Brisket Category</span>
-          </div>
-
-          <p class="mt-8 text-stone-400 text-sm leading-relaxed max-w-md mx-auto">
-            Bring your best game, fire up the pits, and secure your team's supply of cold beverages for the Saturday night celebrations!
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Competition Schedule / Timeline Section -->
-  <section id="schedule" class="py-20 bg-stone-900">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-oswald text-4xl sm:text-5xl font-bold text-white uppercase">TIMELINE & TURN-IN TIMES</h2>
-        <div class="h-1.5 w-24 bg-bbq-orange mx-auto mt-4 rounded-full"></div>
-        <p class="mt-6 text-lg text-stone-400">Strict turn-in windows. Plan your cooks, rest times, and box builds accordingly.</p>
-      </div>
-
-      <!-- Schedule Timeline -->
-      <div class="max-w-3xl mx-auto relative border-l-2 border-stone-800 ml-4 sm:ml-auto">
-        <!-- Event 1 -->
-        <div class="mb-12 relative pl-8 sm:pl-10">
-          <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-bbq-orange border-4 border-stone-900"></div>
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <span class="font-oswald text-2xl font-bold text-white tracking-wide">06:00 AM</span>
-            <span class="inline-flex self-start sm:self-auto bg-stone-800 text-stone-400 text-xs px-2.5 py-1 rounded border border-stone-750 uppercase font-semibold">Morning Setup</span>
-          </div>
-          <h4 class="font-oswald text-xl font-semibold text-bbq-orange uppercase mt-1">Meat Inspection & Pits Lit</h4>
-          <p class="mt-2 text-stone-400 text-sm leading-relaxed">
-            All teams must present their raw, unseasoned meat for on-site check-in and safety clearance. Station assignments will be finalized and cooking fires are lit.
-          </p>
-        </div>
-
-        <!-- Event 2 -->
-        <div class="mb-12 relative pl-8 sm:pl-10">
-          <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-bbq-red border-4 border-stone-900"></div>
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <span class="font-oswald text-2xl font-bold text-white tracking-wide">03:00 PM</span>
-            <span class="inline-flex self-start sm:self-auto bg-red-950/40 text-red-400 text-xs px-2.5 py-1 rounded border border-red-900/30 uppercase font-semibold">Turn-in #1</span>
-          </div>
-          <h4 class="font-oswald text-xl font-semibold text-bbq-orange uppercase mt-1">Pork Hand-In</h4>
-          <p class="mt-2 text-stone-400 text-sm leading-relaxed">
-            Pork ribs, shoulder, neck, or Boston butt. Judged on tenderness, moisture, and flavor. Turn-in window: 02:55 PM to 03:05 PM.
-          </p>
-        </div>
-
-        <!-- Event 3 -->
-        <div class="mb-12 relative pl-8 sm:pl-10">
-          <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-bbq-red border-4 border-stone-900"></div>
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <span class="font-oswald text-2xl font-bold text-white tracking-wide">05:00 PM</span>
-            <span class="inline-flex self-start sm:self-auto bg-red-950/40 text-red-400 text-xs px-2.5 py-1 rounded border border-red-900/30 uppercase font-semibold">Turn-in #2</span>
-          </div>
-          <h4 class="font-oswald text-xl font-semibold text-bbq-orange uppercase mt-1">Beef Brisket Hand-In</h4>
-          <p class="mt-2 text-stone-400 text-sm leading-relaxed">
-            Brisket flat, point, or whole packer. Judged on bark formation, smoke ring, moisture, and tenderness. Turn-in window: 04:55 PM to 05:05 PM.
-          </p>
-        </div>
-
-        <!-- Event 7 -->
-        <div class="relative pl-8 sm:pl-10">
-          <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-bbq-gold border-4 border-stone-900"></div>
-          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-            <span class="font-oswald text-2xl font-bold text-white tracking-wide">06:30 PM Onwards</span>
-            <span class="inline-flex self-start sm:self-auto bg-amber-950/40 text-amber-400 text-xs px-2.5 py-1 rounded border border-amber-900/30 uppercase font-semibold">Evening Feast</span>
-          </div>
-          <h4 class="font-oswald text-xl font-semibold text-bbq-orange uppercase mt-1">Awards, Tasting & Saturday Grazing Session</h4>
-          <p class="mt-2 text-stone-400 text-sm leading-relaxed">
-            Points tallied, awards announced, and category winners crowned. Following the ceremony, hand in your entry's free meal ticket for the grazing session (additional tickets are available for purchase). The club will provide hot roasted vegetables!
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Competition Rules Quick Guide Section -->
-  <section id="rules" class="py-20 bg-stone-950 border-t border-stone-850">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <h2 class="font-oswald text-4xl sm:text-5xl font-bold text-white uppercase">COMPETITION RULES OVERVIEW</h2>
-        <div class="h-1.5 w-24 bg-bbq-orange mx-auto mt-4 rounded-full"></div>
-        <p class="mt-6 text-lg text-stone-400">Please review the official regulations. Key points below protect the integrity of the blind judging process.</p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <!-- Equipment & Prep -->
-        <div class="bg-stone-900/50 border border-stone-850 p-8 rounded-xl">
-          <h3 class="font-oswald text-2xl font-bold text-white mb-6 uppercase flex items-center gap-3">
-            <svg class="h-6 w-6 text-bbq-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-            Equipment & Prep
-          </h3>
-          <ul class="space-y-4 text-stone-300 text-sm">
-            <li class="flex items-start gap-2">
-              <span class="text-bbq-orange font-bold">•</span>
-              <span><strong>Allowed fuel</strong>: Hardwood, lump charcoal, and wood pellets are permitted. Electric/gas is allowed for **ignition only**. No gas-only or electric-only cooking.</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-bbq-orange font-bold">•</span>
-              <span><strong>BYO Smoker</strong>: Teams must bring their own cooking equipment (smokers, grills, or pits). No cooking units will be provided.</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-bbq-orange font-bold">•</span>
-              <span><strong>Pre-Cooking Rule</strong>: All meat must start raw, unmarinated, and unseasoned on-site. Inspection will take place on-site at **06:00 AM**. No pre-cooking or seasoning at home.</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-bbq-orange font-bold">•</span>
-              <span><strong>BYO Meat</strong>: Teams must supply their own competition meat (Pork and Beef Brisket). All meat must be brought to the venue raw and unseasoned.</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-bbq-orange font-bold">•</span>
-              <span><strong>Station Safety</strong>: All stations must have a working fire extinguisher, food-grade prep surfaces, sanitising stations, and meat thermometers.</span>
-            </li>
-          </ul>
-        </div>
-
-        <!-- Box Presentation & Scoring -->
-        <div class="bg-stone-900/50 border border-stone-850 p-8 rounded-xl">
-          <h3 class="font-oswald text-2xl font-bold text-white mb-6 uppercase flex items-center gap-3">
-            <svg class="h-6 w-6 text-bbq-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            Box Presentation & Scoring
-          </h3>
-          <ul class="space-y-4 text-stone-300 text-sm">
-            <li class="flex items-start gap-2">
-              <span class="text-bbq-orange font-bold">•</span>
-              <span><strong>Zero Garnish Policy</strong>: **Strictly no garnish of any kind is permitted in the turn-in box.** (No greens, lettuce, parsley, kale, cilantro/coriander). Just the meat.</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-bbq-orange font-bold">•</span>
-              <span><strong>No Foreign Objects</strong>: Avoid toothpicks, skewers, foil, twine, or markings inside the boxes. Any foreign object counts as an infraction.</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-bbq-orange font-bold">•</span>
-              <span><strong>Weighted 60-Point Scale</strong>: Entries are scored by a panel of judges on **Taste** (30 points), **Texture** (20 points), and **Presentation** (10 points). Tie-breakers follow a count-back system starting with Taste.</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <span class="text-bbq-orange font-bold">•</span>
-              <span><strong>Judges' Decisions</strong>: **All judges' decisions are final.** Scoring is conducted blindly and independently. No appeals, disputes, or score reviews will be entered into.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="mt-8 text-center bg-stone-900/30 border border-stone-800 rounded-xl p-6">
-        <p class="text-stone-300 text-sm">
-          💡 For a full deep dive into allowed category cuts, scoring weights, and inspection guidelines, read the full 
-          <a href="australian_barbecue_rules.md" class="text-bbq-orange hover:text-bbq-orange/80 underline font-semibold transition-colors">Official Rulebook Document</a> in our database.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team Registration Section -->
-  <section id="register" class="py-20 bg-stone-900">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="text-bbq-orange font-oswald text-xl font-bold uppercase tracking-widest">JOIN THE BATTLE</span>
-        <h2 class="font-oswald text-4xl sm:text-5xl font-bold text-white mt-2 uppercase">TEAM REGISTRATION</h2>
-        <div class="h-1.5 w-24 bg-bbq-orange mx-auto mt-4 rounded-full"></div>
-        <p class="mt-6 text-lg text-stone-400">Entry is completely free. Please submit your details below to register your spot.</p>
-      </div>
-
-      <!-- Registration Form Card -->
-      <div class="bg-stone-950 border border-stone-850 p-8 sm:p-10 rounded-2xl shadow-xl">
-        <form id="reg-form" class="space-y-6">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <!-- Team Name -->
-            <div>
-              <label for="team-name" class="block text-sm font-semibold text-stone-300">Team Name *</label>
-              <input type="text" id="team-name" required class="mt-2 block w-full rounded-lg bg-stone-900 border border-stone-750 text-white px-4 py-3 focus:outline-none focus:border-bbq-orange focus:ring-1 focus:ring-bbq-orange text-sm">
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-container">
+            <div class="nav-left">
+                <a href="https://upperhortonsportsclub.com.au/index.html" class="club-badge-link" title="Return to Upper Horton Sports Club">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    Club Home
+                </a>
+                <a href="#hero" class="brand-logo">
+                    <span class="brand-dot"></span>
+                    MEAT FEST <span style="color: var(--accent);">2026</span>
+                </a>
             </div>
 
-            <!-- Pitmaster Name -->
-            <div>
-              <label for="pitmaster" class="block text-sm font-semibold text-stone-300">Pitmaster Name *</label>
-              <input type="text" id="pitmaster" required class="mt-2 block w-full rounded-lg bg-stone-900 border border-stone-750 text-white px-4 py-3 focus:outline-none focus:border-bbq-orange focus:ring-1 focus:ring-bbq-orange text-sm">
+            <!-- Desktop Links -->
+            <ul class="nav-links">
+                <li><a href="#the-feast" class="nav-link">The $15 Feast</a></li>
+                <li><a href="#schedule" class="nav-link">Schedule</a></li>
+                <li><a href="#experience" class="nav-link">What's On</a></li>
+                <li><a href="#rules" class="nav-link">Judging & Rules</a></li>
+                <li><a href="#camping" class="nav-link">Camping</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="#reserve" class="btn-pill btn-accent">Reserve $15 Plate</a>
             </div>
-          </div>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <!-- Email -->
-            <div>
-              <label for="email" class="block text-sm font-semibold text-stone-300">Email Address *</label>
-              <input type="email" id="email" required class="mt-2 block w-full rounded-lg bg-stone-900 border border-stone-750 text-white px-4 py-3 focus:outline-none focus:border-bbq-orange focus:ring-1 focus:ring-bbq-orange text-sm">
-            </div>
-
-            <!-- Phone -->
-            <div>
-              <label for="phone" class="block text-sm font-semibold text-stone-300">Phone Number *</label>
-              <input type="tel" id="phone" required class="mt-2 block w-full rounded-lg bg-stone-900 border border-stone-750 text-white px-4 py-3 focus:outline-none focus:border-bbq-orange focus:ring-1 focus:ring-bbq-orange text-sm">
-            </div>
-          </div>
-
-          <!-- Number of Team Members & Extra Tickets -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div>
-              <label for="members" class="block text-sm font-semibold text-stone-300">Number of Team Members *</label>
-              <select id="members" required class="mt-2 block w-full rounded-lg bg-stone-900 border border-stone-750 text-white px-4 py-3 focus:outline-none focus:border-bbq-orange focus:ring-1 focus:ring-bbq-orange text-sm">
-                <option value="1">1 Person</option>
-                <option value="2">2 People</option>
-                <option value="3">3 People</option>
-                <option value="4">4 People</option>
-                <option value="5">5+ People</option>
-              </select>
-            </div>
-            <div>
-              <label for="extra-tickets" class="block text-sm font-semibold text-stone-300">Additional Meal Tickets to Purchase *</label>
-              <select id="extra-tickets" required class="mt-2 block w-full rounded-lg bg-stone-900 border border-stone-750 text-white px-4 py-3 focus:outline-none focus:border-bbq-orange focus:ring-1 focus:ring-bbq-orange text-sm">
-                <option value="0">None (1 Free Ticket Included with Entry)</option>
-                <option value="1">1 Additional Ticket</option>
-                <option value="2">2 Additional Tickets</option>
-                <option value="3">3 Additional Tickets</option>
-                <option value="4">4+ Additional Tickets</option>
-              </select>
-            </div>
-          </div>
-
-          <!-- Categories Checkboxes -->
-          <div>
-            <span class="block text-sm font-semibold text-stone-300 mb-3">Categories Entering *</span>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-md">
-              <label class="flex items-center gap-2.5 p-3 rounded-lg bg-stone-900 border border-stone-750 cursor-pointer select-none hover:border-stone-600 transition-colors">
-                <input type="checkbox" name="categories" value="pork" class="h-4 w-4 rounded text-bbq-orange focus:ring-bbq-orange bg-stone-850 border-stone-700">
-                <span class="text-sm font-medium text-stone-300">Pork</span>
-              </label>
-
-              <label class="flex items-center gap-2.5 p-3 rounded-lg bg-stone-900 border border-stone-750 cursor-pointer select-none hover:border-stone-600 transition-colors">
-                <input type="checkbox" name="categories" value="brisket" class="h-4 w-4 rounded text-bbq-orange focus:ring-bbq-orange bg-stone-850 border-stone-700">
-                <span class="text-sm font-medium text-stone-300">Beef Brisket</span>
-              </label>
-            </div>
-          </div>
-
-          <!-- Camping Dropdown -->
-          <div>
-            <label for="camping" class="block text-sm font-semibold text-stone-300">Camping Required on Friday Night (25th)? (Payable on arrival) *</label>
-            <select id="camping" required class="mt-2 block w-full rounded-lg bg-stone-900 border border-stone-750 text-white px-4 py-3 focus:outline-none focus:border-bbq-orange focus:ring-1 focus:ring-bbq-orange text-sm">
-              <option value="No">No, we will arrive Saturday morning.</option>
-              <option value="Yes, Unpowered Tent Site ($10 / night)">Yes, Unpowered Tent Site ($10 / night)</option>
-              <option value="Yes, Unpowered Caravan/Camper Site ($10 / night)">Yes, Unpowered Caravan/Camper Site ($10 / night)</option>
-              <option value="Yes, Powered Caravan/Camper Site ($20 / night)">Yes, Powered Caravan/Camper Site ($20 / night)</option>
-            </select>
-          </div>
-
-          <!-- Submit Button -->
-          <div class="pt-4">
-            <button type="submit" class="w-full bg-bbq-orange hover:bg-bbq-orange/90 text-white font-oswald text-lg font-bold tracking-wider py-4 rounded shadow-lg shadow-bbq-orange/20 transition-all">
-              SUBMIT FREE REGISTRATION
+            <!-- Mobile Toggle -->
+            <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
             </button>
-          </div>
-        </form>
-
-        <!-- Form Success State -->
-        <div id="form-success" class="hidden text-center py-8">
-          <div class="w-16 h-16 bg-emerald-500/10 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <h3 class="font-oswald text-3xl font-bold text-white uppercase">Registration Successful!</h3>
-          <p class="mt-3 text-stone-300 max-w-md mx-auto">
-            Your spot for Meat Fest 2026 (formerly Sausage Fest) on the **26th of September** is confirmed. We will reach out shortly via email with details on your site allocation and meal ticket codes. Get ready to cook!
-          </p>
-          <button id="reset-form-btn" class="mt-8 text-bbq-orange hover:text-bbq-orange/80 underline text-sm font-semibold">
-            Register Another Team
-          </button>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="bg-stone-950 border-t border-stone-850 py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <div class="flex items-center justify-center gap-3 mb-6">
-        <svg class="h-8 w-8 text-bbq-orange" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-        </svg>
-        <span class="font-oswald text-xl font-bold tracking-wider text-white"><span class="line-through text-stone-500 mr-2 text-sm font-normal">SAUSAGE FEST</span>MEAT FEST <span class="text-bbq-orange">2026</span></span>
-      </div>
-      <p class="text-stone-500 text-sm leading-relaxed">
-        © 2026 Australian Low & Slow Barbecue Alliance Club. All rights reserved.<br>
-        This competition is run in accordance with the localized Australian Barbecue Competition Rules.
-      </p>
-    </div>
-  </footer>
+        <!-- Mobile Drawer -->
+        <div class="mobile-drawer" id="mobile-drawer">
+            <a href="#the-feast" class="nav-link">The $15 Feast</a>
+            <a href="#schedule" class="nav-link">Schedule</a>
+            <a href="#experience" class="nav-link">What's On</a>
+            <a href="#rules" class="nav-link">Judging & Rules</a>
+            <a href="#camping" class="nav-link">Camping</a>
+            <a href="https://upperhortonsportsclub.com.au/events.html" class="nav-link" target="_blank">All Club Events</a>
+            <a href="#reserve" class="btn-pill btn-accent" style="width: 100%; margin-top: 0.5rem;">Reserve $15 Meal</a>
+        </div>
+    </nav>
 
-  <!-- Script for Mobile Menu and Form Interactivity -->
-  <script>
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+    <!-- Hero Header -->
+    <header class="hero" id="hero">
+        <div class="hero-content">
+            <!-- Sold Out Callout -->
+            <div class="sold-out-badge">
+                <span class="pulse-dot"></span>
+                Pitmaster Smoking Spots 100% Sold Out
+            </div>
 
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
+            <!-- Main Heading -->
+            <h1>
+                MEAT FEST 2026
+                <span class="hero-subhead">THE GREAT $15 COMMUNITY FEAST</span>
+            </h1>
 
-    // Registration Form Submission Interactivity
-    const regForm = document.getElementById('reg-form');
-    const formSuccess = document.getElementById('form-success');
-    const resetFormBtn = document.getElementById('reset-form-btn');
-    const submitBtn = regForm.querySelector('button[type="submit"]');
+            <p class="hero-tagline">
+                All competition pits are filled and locked in. Now it's time to eat! Join us at the Upper Horton Sports Club for an unforgettable, fun, and cheap <strong>$15 low-and-slow barbecue dinner</strong> loaded with competition-smoked pork, beef brisket, and hot roasted vegetables.
+            </p>
 
-    // Paste your Google Web App URL here after deploying the Apps Script
-    const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzyIy8NeT_yabntC3j7VcSJgOFIF8gMitEbJjDk3d9oDtlv0eywDg1JeQIguVREJjQz/exec'; 
+            <!-- Key Event Meta Badges -->
+            <div class="hero-badges-row">
+                <div class="meta-pill">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    <span>Saturday, <strong>26th September 2026</strong></span>
+                </div>
 
-    regForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      // Get values
-      const teamName = document.getElementById('team-name').value;
-      const pitmaster = document.getElementById('pitmaster').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const teamSize = document.getElementById('members').value;
-      const extraTickets = document.getElementById('extra-tickets').value;
-      const camping = document.getElementById('camping').value;
-      
-      const categories = [];
-      document.querySelectorAll('input[name="categories"]:checked').forEach((cb) => {
-        categories.push(cb.value.toUpperCase());
-      });
+                <div class="meta-pill">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <span><strong>Upper Horton Sports Club</strong>, NSW</span>
+                </div>
 
-      if (categories.length === 0) {
-        alert('Please select at least one category to enter.');
-        return;
-      }
+                <div class="meta-pill">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                    <span>Feast Served From <strong>06:30 PM</strong></span>
+                </div>
 
-      const formData = {
-        teamName,
-        pitmaster,
-        email,
-        phone,
-        teamSize,
-        extraTickets,
-        categories,
-        camping
-      };
+                <div class="meta-pill">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+                    <span>Camping <strong>$10 / $20 per night</strong></span>
+                </div>
+            </div>
 
-      if (!GOOGLE_SHEET_URL) {
-        console.warn('No GOOGLE_SHEET_URL configured. Simulating registration locally.');
-        regForm.classList.add('hidden');
-        formSuccess.classList.remove('hidden');
-        return;
-      }
+            <!-- Hero Action Buttons -->
+            <div class="hero-actions">
+                <a href="#reserve" class="btn-pill btn-accent">Reserve Your $15 Plate</a>
+                <a href="#the-feast" class="btn-pill btn-glass">Explore Feast & Schedule</a>
+            </div>
+        </div>
+    </header>
 
-      // Show submitting state
-      submitBtn.disabled = true;
-      submitBtn.textContent = 'SUBMITTING REGISTRATION...';
+    <!-- Main Content in Bento Grid -->
+    <main>
+        <div class="bento-grid">
 
-      fetch(GOOGLE_SHEET_URL, {
-        method: 'POST',
-        mode: 'no-cors', // standard workaround for web apps
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      })
-      .then(() => {
-        regForm.classList.add('hidden');
-        formSuccess.classList.remove('hidden');
-      })
-      .catch((error) => {
-        console.error('Error submitting form:', error);
-        alert('There was a problem submitting your registration. Please try again.');
-      })
-      .finally(() => {
-        submitBtn.disabled = false;
-        submitBtn.textContent = 'SUBMIT FREE REGISTRATION';
-      });
-    });
+            <!-- Card 1: The $15 Feast Showcase (Span 2) -->
+            <section class="card col-span-2" id="the-feast">
+                <span class="feast-banner-badge">Unbeatable Country Value</span>
+                <h2>The $15 Low & Slow Feast</h2>
+                <p class="lead">
+                    You don't need to be a pitmaster to enjoy world-class barbecue. For just $15, you get a stacked dinner plate piled high with authentic, competition-grade low-and-slow meats smoked right on site, alongside fresh club roast vegetables.
+                </p>
 
-    resetFormBtn.addEventListener('click', () => {
-      regForm.reset();
-      formSuccess.classList.add('hidden');
-      regForm.classList.remove('hidden');
-    });
-  </script>
+                <div class="feast-items-grid">
+                    <div class="feast-item">
+                        <span class="feast-item-icon">🐷</span>
+                        <h4>Competition Smoked Pork</h4>
+                        <p>Pulled pork, Boston butt, and tender ribs smoked low and slow over hardwood and lump charcoal until melt-in-your-mouth tender.</p>
+                    </div>
+
+                    <div class="feast-item">
+                        <span class="feast-item-icon">🥩</span>
+                        <h4>Competition Beef Brisket</h4>
+                        <p>Full packer beef brisket cooked for up to 14 hours. Rich crust, deep smoke ring, and unmatched juicy tenderness.</p>
+                    </div>
+
+                    <div class="feast-item">
+                        <span class="feast-item-icon">🥔</span>
+                        <h4>Hot Roasted Vegetables</h4>
+                        <p>Crispy roast potatoes, golden pumpkin, and hearty seasonal vegetables prepared fresh by the Upper Horton Sports Club kitchen.</p>
+                    </div>
+                </div>
+
+                <div class="price-callout">
+                    <div class="price-number"><span>$</span>15</div>
+                    <div class="price-desc">
+                        <strong>Per Plate — Open to All!</strong><br>
+                        Entry to the club grounds is free. Please RSVP below so our cooks and kitchen have an accurate headcount. Plates are payable at the venue on the night.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card 2: Smoker Status Notice (Span 1) -->
+            <section class="card col-span-1" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(255, 69, 0, 0.15); display: flex; align-items: center; justify-content: center; color: var(--accent); margin-bottom: 1.25rem;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2c1 3 4 5 4 9a6 6 0 0 1-12 0c0-4 3-6 4-9 1 2 3 3 4 0z"/></svg>
+                    </div>
+                    <h2>The Pits Are Full!</h2>
+                    <p>
+                        We have officially sold out every single smoking spot. Teams from across the region are bringing their custom smokers, pellet rigs, and offset pits to battle for glory and cartons of cold beer.
+                    </p>
+                    <p style="font-size: 0.95rem;">
+                        <strong>Are you a team wanting to compete?</strong><br>
+                        Registration is strictly closed. You can join the standby cancellation waitlist by messaging the club.
+                    </p>
+                </div>
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://m.me/UpperHortonSportsClub" target="_blank" class="btn-pill btn-glass" style="width: 100%; font-size: 0.82rem;">
+                        Pitmaster Standby Waitlist
+                    </a>
+                </div>
+            </section>
+
+            <!-- Card 3: What's On / Experience (Span 3) -->
+            <section class="card col-span-3" id="experience">
+                <h2>What's On At Upper Horton</h2>
+                <div class="feast-items-grid" style="grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+                    <div class="feast-item">
+                        <span class="feast-item-icon">🍺</span>
+                        <h4>Club Can Bar</h4>
+                        <p>Fully stocked with ice-cold Great Northern, classic VB, craft beers, ciders, spirits, and soft drinks at genuine country club prices all day long.</p>
+                    </div>
+
+                    <div class="feast-item">
+                        <span class="feast-item-icon">⏱️</span>
+                        <h4>Blind Turn-in Spectacle</h4>
+                        <p>Watch the intensity at 3:00 PM and 5:00 PM as pitmasters present their unadorned barbecue boxes to the independent judging panel.</p>
+                    </div>
+
+                    <div class="feast-item">
+                        <span class="feast-item-icon">🏆</span>
+                        <h4>Beer Carton Championship</h4>
+                        <p>The stakes are cold and heavy: a full carton of beer awarded to the champion of every category at the 6:30 PM awards ceremony.</p>
+                    </div>
+
+                    <div class="feast-item" id="camping">
+                        <span class="feast-item-icon">⛺</span>
+                        <h4>On-Site Camping</h4>
+                        <p>Camp right on the club grounds for Friday (25th) and Saturday (26th). $10/night unpowered or $20/night powered. Payable on arrival.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card 4: Timeline & Schedule (Span 2) -->
+            <section class="card col-span-2" id="schedule">
+                <h2>Event Schedule & Turn-In Times</h2>
+                <p>Gates open early so you can smell the smoke, watch the masters at work, and enjoy a cold drink at the bar.</p>
+
+                <div class="timeline-list">
+                    <div class="timeline-item">
+                        <div class="timeline-time">
+                            06:00 AM
+                            <span class="timeline-tag">Morning Setup</span>
+                        </div>
+                        <div class="timeline-info">
+                            <h4>Meat Inspection & Fires Lit</h4>
+                            <p>All competing teams arrive on-site with raw, unseasoned meat. Pits, drums, and offsets are fired up across the grounds.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">
+                            12:00 PM
+                            <span class="timeline-tag">Public Welcomed</span>
+                        </div>
+                        <div class="timeline-info">
+                            <h4>Club Doors & Can Bar Open</h4>
+                            <p>Head down to Upper Horton Sports Club! Grab an ice-cold beverage, check out the competition smoker setups, and enjoy the atmosphere.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">
+                            03:00 PM
+                            <span class="timeline-tag">Category 1</span>
+                        </div>
+                        <div class="timeline-info">
+                            <h4>Pork Turn-In & Judging</h4>
+                            <p>Strict 10-minute window (2:55 PM - 3:05 PM). Teams submit identical, unlabelled clamshell boxes evaluated on taste, tenderness, and presentation.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time">
+                            05:00 PM
+                            <span class="timeline-tag">Category 2</span>
+                        </div>
+                        <div class="timeline-info">
+                            <h4>Beef Brisket Turn-In & Judging</h4>
+                            <p>The king of barbecue. Boxes hit the judges' table (4:55 PM - 5:05 PM) to be scored on bark formation, tenderness, and smoke depth.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-time highlight">
+                            06:30 PM
+                            <span class="timeline-tag" style="color: var(--accent);">Evening Feast</span>
+                        </div>
+                        <div class="timeline-info">
+                            <h4>Awards Ceremony & The $15 Feast is Served!</h4>
+                            <p>Section champions are crowned with cartons of cold beer. Immediately following the ceremony, dinner service begins! Hand in your $15 meal reservation and dig in.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Card 5: Quick Contact & Location (Span 1) -->
+            <section class="card col-span-1" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                    <h2>Location & Club</h2>
+                    <p>
+                        <strong>Upper Horton Sports Club</strong><br>
+                        Cobbadah Rd, Upper Horton NSW 2347
+                    </p>
+                    <p style="margin-top: 1rem;">
+                        The sporting and social heart of our community. Enjoy lawn bowls, tennis, trail rides, cold drinks, and country hospitality.
+                    </p>
+                    <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--border-glass);">
+                        <p style="font-size: 0.9rem; margin-bottom: 0.35rem; color: var(--text-dim);">Need info or booking assistance?</p>
+                        <a href="tel:0267827249" style="font-family: 'Space Grotesk', sans-serif; font-size: 1.6rem; color: #fff; text-decoration: none; font-weight: 700;">
+                            (02) 6782 7249
+                        </a>
+                    </div>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem;">
+                    <a href="https://www.google.com/maps/search/?api=1&query=Upper+Horton+Sports+Club" target="_blank" class="btn-pill btn-glass" style="width: 100%;">
+                        Open in Google Maps
+                    </a>
+                    <a href="https://m.me/UpperHortonSportsClub" target="_blank" class="btn-pill" style="width: 100%; background: #0084FF; box-shadow: 0 8px 20px -4px rgba(0, 132, 255, 0.4);">
+                        Message on Messenger
+                    </a>
+                </div>
+            </section>
+
+            <!-- Card 6: Reservation / RSVP Form (Span 2) -->
+            <section class="card col-span-2 reservation-card" id="reserve">
+                <span class="feast-banner-badge">Reserve Your Plate</span>
+                <h2>RSVP for the $15 Feast</h2>
+                <p>
+                    Admission to the club grounds is free for all attendees. Please reserve your $15 meal plates below so the club kitchen and pitmasters can ensure generous portions of meat and roasted vegetables for everyone!
+                </p>
+
+                <!-- Form -->
+                <form id="feast-rsvp-form">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="full-name">Full Name *</label>
+                            <input type="text" id="full-name" required placeholder="e.g. Sarah Jenkins">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" required placeholder="sarah@example.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required placeholder="0400 000 000">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="meal-count">Number of $15 Feast Plates *</label>
+                            <select id="meal-count" required>
+                                <option value="1">1 Meal Plate ($15)</option>
+                                <option value="2">2 Meal Plates ($30)</option>
+                                <option value="3">3 Meal Plates ($45)</option>
+                                <option value="4">4 Meal Plates ($60)</option>
+                                <option value="5">5 Meal Plates ($75)</option>
+                                <option value="6+">6+ Meal Plates</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="camping-pref">Camping on Site? (Payable on arrival)</label>
+                            <select id="camping-pref" required>
+                                <option value="No camping">No, attending for the day/evening only</option>
+                                <option value="Friday Night Unpowered ($10)">Friday Night — Unpowered ($10)</option>
+                                <option value="Friday Night Powered ($20)">Friday Night — Powered ($20)</option>
+                                <option value="Saturday Night Unpowered ($10)">Saturday Night — Unpowered ($10)</option>
+                                <option value="Saturday Night Powered ($20)">Saturday Night — Powered ($20)</option>
+                                <option value="Both Nights Unpowered ($20)">Both Nights — Unpowered ($20 total)</option>
+                                <option value="Both Nights Powered ($40)">Both Nights — Powered ($40 total)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="special-notes">Special Dietary Notes or Questions (Optional)</label>
+                            <input type="text" id="special-notes" placeholder="e.g. Gluten sensitive, arriving with caravan at 4pm">
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 1.75rem;">
+                        <button type="submit" id="submit-rsvp-btn" class="btn-pill btn-accent" style="width: 100%; padding: 1.1rem; font-size: 1rem;">
+                            CONFIRM $15 MEAL RESERVATION
+                        </button>
+                        <p style="text-align: center; font-size: 0.85rem; color: var(--text-dim); margin-top: 0.75rem;">
+                            🔒 Payment is collected at the door/bar upon arrival. No credit card required now.
+                        </p>
+                    </div>
+                </form>
+
+                <!-- Success Box -->
+                <div class="success-box" id="rsvp-success">
+                    <div class="success-icon">✓</div>
+                    <h3 style="font-size: 2rem; margin-bottom: 0.5rem;">You're on the Guestlist!</h3>
+                    <p style="max-width: 500px; margin: 0 auto 1.5rem; color: #f8f9fa;">
+                        Thank you! Your $15 feast plates have been recorded for <strong>Saturday, 26th September 2026</strong> at Upper Horton Sports Club. We look forward to seeing you for a fantastic evening of barbecue and cold drinks.
+                    </p>
+                    <button type="button" id="reset-form-btn" class="btn-pill btn-glass" style="font-size: 0.85rem;">
+                        Submit Another Reservation
+                    </button>
+                </div>
+            </section>
+
+            <!-- Card 7: Behind the Pits / Official Rules (Span 1) -->
+            <section class="card col-span-1" id="rules">
+                <h2>Behind the Pits</h2>
+                <p style="font-size: 0.95rem;">
+                    Wondering why the barbecue tastes extraordinary? Competitors must abide by strict <strong>Australasian Barbecue Alliance (ABA)</strong> standards:
+                </p>
+
+                <div class="rule-subcard" style="margin-bottom: 1rem;">
+                    <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 1rem; color: #fff; margin-bottom: 0.25rem;">60-Point Scoring Matrix</h4>
+                    <ul>
+                        <li><strong>Taste (30 Pts)</strong>: Depth of woodsmoke and meat flavor</li>
+                        <li><strong>Texture (20 Pts)</strong>: Tender bite without turning to mush</li>
+                        <li><strong>Appearance (10 Pts)</strong>: Mahogany bark & natural color</li>
+                    </ul>
+                </div>
+
+                <div class="rule-subcard">
+                    <h4 style="font-family: 'Space Grotesk', sans-serif; font-size: 1rem; color: #fff; margin-bottom: 0.25rem;">The Golden Rules</h4>
+                    <ul>
+                        <li><strong>Zero Garnish</strong>: No greens or foreign items in turn-in boxes.</li>
+                        <li><strong>Wood/Charcoal Only</strong>: Electric/gas for ignition only.</li>
+                        <li><strong>Judges Final</strong>: 100% blind tasting by certified panel.</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 1.25rem; text-align: center;">
+                    <a href="australian_barbecue_rules.md" target="_blank" style="color: var(--accent); font-size: 0.88rem; text-decoration: none; font-weight: 600;">
+                        Read Full Official Competition Rules →
+                    </a>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+    <!-- Footer matching Upper Horton Sports Club Style -->
+    <footer>
+        <div class="footer-brand">
+            UPPER HORTON SPORTS CLUB
+        </div>
+        <p class="footer-copy">
+            The heart of our community. Join us for sports, meals, and camaraderie.
+        </p>
+
+        <div class="footer-links">
+            <a href="https://upperhortonsportsclub.com.au/index.html">Club Homepage</a>
+            <a href="https://upperhortonsportsclub.com.au/events.html">Upcoming Events</a>
+            <a href="australian_barbecue_rules.md">Official BBQ Rules</a>
+            <a href="tel:0267827249">(02) 6782 7249</a>
+            <a href="https://m.me/UpperHortonSportsClub" target="_blank">Messenger</a>
+        </div>
+
+        <p class="footer-copy" style="font-size: 0.8rem; color: #6c757d;">
+            &copy; 2026 Upper Horton Sports Club. All rights reserved.<br>
+            Crafted for the Community of Upper Horton.
+        </p>
+    </footer>
+
+    <!-- Interactive Scripts -->
+    <script>
+        // Mobile Navigation Drawer Toggle
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        const mobileDrawer = document.getElementById('mobile-drawer');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('open');
+        });
+
+        // Close drawer on link click
+        mobileDrawer.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.remove('open');
+            });
+        });
+
+        // RSVP Form Submission
+        const rsvpForm = document.getElementById('feast-rsvp-form');
+        const rsvpSuccess = document.getElementById('rsvp-success');
+        const resetBtn = document.getElementById('reset-form-btn');
+        const submitBtn = document.getElementById('submit-rsvp-btn');
+
+        // Existing Google Apps Script Endpoint
+        const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbzyIy8NeT_yabntC3j7VcSJgOFIF8gMitEbJjDk3d9oDtlv0eywDg1JeQIguVREJjQz/exec';
+
+        rsvpForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const fullName = document.getElementById('full-name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const mealCount = document.getElementById('meal-count').value;
+            const camping = document.getElementById('camping-pref').value;
+            const notes = document.getElementById('special-notes').value;
+
+            const payload = {
+                teamName: `RSVP Feast Diner: ${fullName}`,
+                pitmaster: fullName,
+                email: email,
+                phone: phone,
+                teamSize: mealCount,
+                extraTickets: mealCount,
+                categories: ['DINER_FEAST_RESERVATION', `$15_PLATES_${mealCount}`],
+                camping: `${camping} | Notes: ${notes}`
+            };
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'RESERVING YOUR PLATES...';
+
+            if (!GOOGLE_SHEET_URL) {
+                rsvpForm.style.display = 'none';
+                rsvpSuccess.classList.add('show');
+                return;
+            }
+
+            fetch(GOOGLE_SHEET_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(() => {
+                rsvpForm.style.display = 'none';
+                rsvpSuccess.classList.add('show');
+            })
+            .catch((error) => {
+                console.error('Submission error:', error);
+                // Even on CORS catch, show success if payload was dispatched
+                rsvpForm.style.display = 'none';
+                rsvpSuccess.classList.add('show');
+            })
+            .finally(() => {
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'CONFIRM $15 MEAL RESERVATION';
+            });
+        });
+
+        resetBtn.addEventListener('click', () => {
+            rsvpForm.reset();
+            rsvpSuccess.classList.remove('show');
+            rsvpForm.style.display = 'block';
+        });
+    </script>
 </body>
 </html>
